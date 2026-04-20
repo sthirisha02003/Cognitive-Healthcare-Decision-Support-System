@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Detection</title>
+</head>
+<body>
+
+<h2>Upload Medical Report</h2>
+
+<input type="file" id="fileInput">
+<button onclick="predict()">Predict</button>
+
+<p id="result"></p>
+
+<script>
+function predict() {
+    document.getElementById("result").innerHTML =
+        "Prediction will be shown after backend connection";
+}
+</script>
+
+</body>
+</html>
