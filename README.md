@@ -1,86 +1,123 @@
 # Cognitive Healthcare Decision Support System
 
 ## 📌 Overview
-This project builds an intelligent healthcare decision-support system to predict diabetes risk using OCR, Machine Learning, and Fuzzy Logic.
 
-The system extracts medical data from report images and provides accurate, explainable predictions.
+The Cognitive Healthcare Decision Support System is an AI-powered application developed to predict diabetes risk from medical report images using OCR, Machine Learning, and rule-based fuzzy logic.
+
+The system automatically extracts medical values such as glucose and BMI from uploaded reports and provides intelligent risk predictions with confidence scores.
 
 ---
 
 ## 🧠 Key Features
-- OCR-based medical data extraction (Tesseract + OpenCV)
-- Data preprocessing & feature engineering
-- Machine Learning models:
-  - Random Forest
-  - SVM
-  - Neural Networks
-- Fuzzy logic for explainable reasoning
-- SHAP for model interpretability
-- Full-stack web application (React + Flask/FastAPI)
+
+* OCR-based medical report text extraction using Tesseract OCR
+* Automatic extraction of healthcare parameters
+* Diabetes prediction using Machine Learning
+* Risk classification using fuzzy logic
+* REST API backend using FastAPI
+* Frontend integration support
+* Explainable healthcare prediction workflow
 
 ---
 
-## 🏗️ Architecture
-1. Image Input (Medical Reports)
-2. Image Processing (OpenCV)
-3. Text Extraction (OCR - Tesseract)
-4. Feature Engineering (Regex + NLP)
-5. ML Models (RF, SVM, NN)
-6. Fuzzy Logic Layer
-7. Explainability (SHAP)
-8. Web Dashboard Output
+## 🏗️ System Architecture
 
----
-
-## 📊 Dataset
-- 500+ labeled medical report images
-- Classes:
-  - Normal
-  - Pre-diabetic
-  - Type 1 Diabetes
-  - Type 2 Diabetes
+1. Medical Report Image Upload
+2. OCR Text Extraction
+3. Data Preprocessing
+4. Feature Extraction
+5. Machine Learning Prediction
+6. Fuzzy Logic Risk Analysis
+7. Prediction Dashboard Output
 
 ---
 
 ## ⚙️ Technologies Used
-- Python
-- OpenCV
-- Tesseract OCR
-- Pandas, NumPy
-- Scikit-learn
-- TensorFlow
-- SHAP
-- React.js
-- Flask / FastAPI
+
+* Python
+* FastAPI
+* Tesseract OCR
+* NumPy
+* Scikit-learn
+* Joblib
+* PIL (Python Imaging Library)
+* Regex
+* HTML/CSS/JavaScript or React.js
 
 ---
 
-## 📈 Model Evaluation
-- Accuracy, Precision, Recall, F1-score
-- ROC-AUC
-- Confusion Matrix
-- Cross-validation
+## 🤖 Machine Learning
+
+The system uses Logistic Regression for diabetes risk prediction based on extracted medical features such as:
+
+* Glucose Level
+* BMI
+
+Prediction output:
+
+* Diabetic / Non-Diabetic
+* Confidence Score
+
+---
+
+## 🧩 Fuzzy Logic Layer
+
+A rule-based fuzzy logic module is used to classify risk levels:
+
+* LOW Risk
+* MEDIUM Risk
+* HIGH Risk
+
+Example:
+
+* High glucose + high BMI → HIGH risk
 
 ---
 
 ## 💡 Results
-- Successfully detected Type 2 Diabetes with ~90% confidence
-- Identified key risk factors:
-  - High HbA1c
-  - High glucose levels
-  - Insulin resistance
-- Provided explainable insights using SHAP
+
+* Successfully extracted medical values from report images
+* Generated diabetes risk predictions with confidence scores
+* Combined OCR + ML + fuzzy reasoning in a single workflow
+* Built a lightweight healthcare AI backend system
 
 ---
 
 ## 🚀 How to Run
-1. Upload medical report image
-2. Run OCR extraction
-3. Process features
-4. Run ML models
-5. View prediction + explanation
+
+### Install Dependencies
+
+```bash
+pip install fastapi uvicorn pytesseract pillow scikit-learn joblib python-multipart
+```
+
+### Install OCR Engine
+
+```bash
+apt-get install tesseract-ocr -y
+```
+
+### Run Backend
+
+```bash
+uvicorn main:app --reload
+```
+
+### Open API Docs
+
+```arduino
+http://127.0.0.1:8000/docs
+```
 
 ---
+
+## 📌 Future Scope
+
+* Integration with real hospital datasets
+* Advanced Deep Learning models
+* SHAP-based explainability
+* Mobile healthcare application
+* Real-time cloud deployment
 
 ## 📌 Future Scope
 - Real-time hospital integration
